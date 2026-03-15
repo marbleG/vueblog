@@ -1,44 +1,64 @@
-module.exports = {
-    base: "/vueblog/",
-    themeConfig: {
-        nav: [
-            {text: 'Home', link: '/'},
-            {text: 'java', link: '/zh/java/'},
-            {text: 'redis', link: '/redis/'},
-            {text: 'CI/CD', link: '/cicd/'},
-            {text: '网络', link: '/network/'},
-            {text: '存储', link: '/store/'},
-            {text: 'k8s', link: '/k8s/'},
-            {text: 'linux', link: '/linux/'},
-            {text: '规范', link: '/standard/'},
-            {text: '百度一下', link: 'https://www.baidu.com'},
-            {text: 'google', link: 'https://www.google.com'},
+import { defineUserConfig } from 'vuepress'
+import { defaultTheme } from '@vuepress/theme-default'
+import { viteBundler } from '@vuepress/bundler-vite'
+
+export default defineUserConfig({
+    base: '/vueblog/',
+    lang: 'zh-CN',
+    title: 'Marble\'s blog',
+    description: '技术博客',
+    bundler: viteBundler(),
+    theme: defaultTheme({
+        navbar: [
+            { text: 'Home', link: '/' },
+            { text: 'java', link: '/zh/java/' },
+            { text: 'redis', link: '/redis/' },
+            { text: 'CI/CD', link: '/cicd/' },
+            { text: '网络', link: '/network/' },
+            { text: '存储', link: '/store/' },
+            { text: 'k8s', link: '/k8s/' },
+            { text: 'linux', link: '/linux/' },
+            { text: '规范', link: '/standard/' },
+            { text: '百度一下', link: 'https://www.baidu.com' },
+            { text: 'google', link: 'https://www.google.com' },
         ],
         sidebar: {
             '/cicd/': [
-                '',     /* /cicd/ */
-                'devops',  /* /cicd/devops.html */
+                '',
+                'devops',
             ],
             '/redis/': [
-                '',  /* /redis/README.html */
-                'aof',  /* /redis/aof.html */
-                'rdb'   /* /redis/chapter2.html */
+                '',
+                'aof',
+                'rdb'
             ],
             '/store/': [
-                '',  /* /ceph/README.html */
-                'ceph',  /* /ceph/ceph.html */
+                '',
+                'ceph',
             ],
             '/standard/': [
-                '',  /* /standard/README.html */
-                'design',  /* /standard/design.html */
+                '',
+                'design',
             ],
             '/network/': [
-                '',  /* /network/README.html */
-                'base',  /* /network/base.html */
-            ]
+                '',
+                'base',
+            ],
+            '/k8s/': [
+                '',
+            ],
+            '/linux/': [
+                '',
+            ],
+            '/design/': [
+                '',
+            ],
+            '/zh/guide/': [
+                '',
+            ],
+            '/zh/java/': [
+                '',
+            ],
         }
-    },
-    sidebar: 'auto',
-    plugins: ['@vuepress/back-to-top']
-
-}
+    })
+})
