@@ -35,6 +35,27 @@ export default defineUserConfig({
             '/store/': [
                 '',
                 'ceph',
+                {
+                    text: '第1单元-快速入门',
+                    collapsible: true,
+                    children: [
+                        '第1单元-快速入门/Ceph分布式存储'
+                    ]
+                },
+                {
+                    text: '第2单元-核心实践',
+                    collapsible: true,
+                    children: [
+                        '第2单元-核心实践/Ceph分布式存储'
+                    ]
+                },
+                {
+                    text: '第3单元-综合实践',
+                    collapsible: true,
+                    children: [
+                        '第3单元-综合实践/Ceph分布式存储'
+                    ]
+                }
             ],
             '/standard/': [
                 '',
