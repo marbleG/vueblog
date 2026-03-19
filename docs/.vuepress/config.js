@@ -1,13 +1,20 @@
 import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
 import { viteBundler } from '@vuepress/bundler-vite'
+import { searchPlugin } from '@vuepress/plugin-search'
 
 export default defineUserConfig({
-    base: '/vueblog/',
+    base: '/',
     lang: 'zh-CN',
     title: 'Marble\'s blog',
     description: '技术博客',
     bundler: viteBundler(),
+    plugins: [
+        searchPlugin({
+            // 排除首页
+            exclude: ['/'],
+        }),
+    ],
     theme: defaultTheme({
         navbar: [
             { text: 'Home', link: '/' },
@@ -35,6 +42,7 @@ export default defineUserConfig({
             '/store/': [
                 '',
                 'ceph',
+                'ceph-rbd-iscsi-overview',
                 {
                     text: '第1单元-快速入门',
                     collapsible: true,
