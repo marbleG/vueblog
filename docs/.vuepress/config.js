@@ -68,6 +68,7 @@ export default defineUserConfig({
             '/standard/': [
                 '',
                 'design',
+                'vueblog-maintain',
             ],
             '/network/': [
                 '',
