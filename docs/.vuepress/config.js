@@ -25,6 +25,7 @@ export default defineUserConfig({
             { text: '存储', link: '/store/' },
             { text: 'k8s', link: '/k8s/' },
             { text: 'linux', link: '/linux/' },
+            { text: '设计模式', link: '/design/' },
             { text: '规范', link: '/standard/' },
             { text: '百度一下', link: 'https://www.baidu.com' },
             { text: 'google', link: 'https://www.google.com' },
@@ -42,6 +43,7 @@ export default defineUserConfig({
             '/store/': [
                 '',
                 'ceph',
+                'iscsi',
                 'ceph-rbd-iscsi-overview',
                 {
                     text: '第1单元-快速入门',
@@ -68,7 +70,7 @@ export default defineUserConfig({
             '/standard/': [
                 '',
                 'design',
-                'vueblog-maintain',
+                { text: 'vueblog 维护流程', link: 'vueblog-maintain' },
             ],
             '/network/': [
                 '',
@@ -82,9 +84,33 @@ export default defineUserConfig({
             ],
             '/design/': [
                 '',
-            ],
-            '/zh/guide/': [
-                '',
+                // 创建型
+                'simple-factory',
+                'factory-method',
+                'abstract-factory',
+                'builder',
+                'prototype',
+                'singleton',
+                // 结构型
+                'adapter',
+                'bridge',
+                'composite',
+                'decorator',
+                'facade',
+                'flyweight',
+                'proxy',
+                // 行为型
+                'chain-of-responsibility',
+                'command',
+                'iterator',
+                'mediator',
+                'memento',
+                'observer',
+                'state',
+                'strategy',
+                'template-method',
+                'visitor',
+                'interpreter',
             ],
             '/zh/java/': [
                 '',
