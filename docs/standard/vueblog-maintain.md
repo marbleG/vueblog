@@ -141,8 +141,12 @@ systemctl stop clash
 1. **图片存放**: 图片放在 `docs/.vuepress/public/`，引用方式 `/image.png`
 2. **内部链接**: 同一博客内的文章使用相对路径，比如 `./ceph-rbd-iscsi-overview.md`，VuePress 会自动处理
 3. **分类导航**: 一定要在 `config.js` 添加文章链接，否则侧边栏看不到文章
-4. **代理使用**: GitHub 拉推送必须启动 clash，完成后关闭
-5. **部署**: 每次编译后都要重新 `cp` 到 nginx 目录
+   - 纯文字链接：直接写文件名 `'article-name'`，显示为文件名
+   - 自定义中文标题：写成 `{ text: '显示标题', link: 'article-name' }`
+4. **编译缓存问题**: 新增文章如果没生成html，尝试 `rm -rf docs/.vuepress/dist` 清理后重新编译
+5. **broken link 问题**: 不要使用 `{docsify-updated}` 这类docsify特有语法，VuePress不支持会生成死链
+6. **代理使用**: GitHub 拉推送必须启动 clash，完成后关闭
+7. **部署**: 每次编译后都要重新 `cp` 到 nginx 目录
 
 ---
 

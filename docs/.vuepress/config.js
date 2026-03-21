@@ -26,6 +26,7 @@ export default defineUserConfig({
             { text: 'k8s', link: '/k8s/' },
             { text: 'linux', link: '/linux/' },
             { text: '设计模式', link: '/design/' },
+            { text: '开发工具', link: '/tools/' },
             { text: '规范', link: '/standard/' },
             { text: '百度一下', link: 'https://www.baidu.com' },
             { text: 'google', link: 'https://www.google.com' },
@@ -111,6 +112,10 @@ export default defineUserConfig({
                 'template-method',
                 'visitor',
                 'interpreter',
+            ],
+            '/tools/': [
+                '',
+                'opencode',
             ],
             '/zh/java/': [
                 '',
