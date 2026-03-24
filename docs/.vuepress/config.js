@@ -116,9 +116,89 @@ export default defineUserConfig({
             '/tools/': [
                 '',
                 'opencode',
+                'vibe-coding-ai-coding',
             ],
             '/zh/java/': [
-                '',
+                {
+                    text: 'Java 分类',
+                    collapsible: true,
+                    children: [
+                        '',
+                    ]
+                },
+                {
+                    text: 'Java 新特性',
+                    collapsible: true,
+                    prefix: 'features/',
+                    children: [
+                        'java8',
+                        'java9-11',
+                        'java17',
+                    ]
+                },
+                {
+                    text: 'JVM',
+                    collapsible: true,
+                    prefix: 'jvm/',
+                    children: [
+                        'memory-model',
+                        'garbage-collection',
+                        'jvm-tuning',
+                        'class-loading',
+                    ]
+                },
+                {
+                    text: '并发编程',
+                    collapsible: true,
+                    prefix: 'concurrent/',
+                    children: [
+                        'basics',
+                        'thread-pool',
+                        'locks',
+                        'synchronizers',
+                        'atomic',
+                    ]
+                },
+                {
+                    text: 'Spring 生态',
+                    collapsible: true,
+                    prefix: 'spring/',
+                    children: [
+                        'spring-ioc',
+                        'spring-aop',
+                        'spring-boot',
+                        'spring-common-annotations',
+                    ]
+                },
+                {
+                    text: 'ORM & 数据库',
+                    collapsible: true,
+                    prefix: 'orm/',
+                    children: [
+                        'jdbc',
+                        'mybatis',
+                        'jpa-hibernate',
+                    ]
+                },
+                {
+                    text: '网络编程',
+                    collapsible: true,
+                    prefix: 'network/',
+                    children: [
+                        'io-bio-nio',
+                        'netty',
+                    ]
+                },
+                {
+                    text: '集合框架',
+                    collapsible: true,
+                    prefix: 'collections/',
+                    children: [
+                        'overview',
+                        'list-vs-set',
+                        'map-implementations',
+                    ]
+                },
             ],
         }
     })

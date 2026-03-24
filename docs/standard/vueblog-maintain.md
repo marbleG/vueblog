@@ -26,11 +26,21 @@ categories: 规范
 │   │   ├── config.js         # 导航栏、侧边栏配置（这里改导航）
 │   │   ├── dist/            # 编译输出目录
 │   │   └── public/          # 静态资源（图片等）
-│   ├── store/               # 存储分类文章
-│   ├── java/                # Java 分类文章
+│   ├── zh/java/             # Java 分类文章（完整分类结构如下）
+│   │   ├── README.md        # Java 分类首页
+│   │   ├── collections/     # 集合框架
+│   │   ├── concurrent/     # 并发编程
+│   │   ├── features/       # Java 新特性
+│   │   ├── jvm/            # JVM
+│   │   ├── network/        # 网络编程
+│   │   ├── orm/            # ORM & 数据库
+│   │   └── spring/         # Spring 生态
+│   ├── store/               # Ceph 存储分类文章
 │   ├── standard/            # 规范、流程分类文章（本文在这里）
 │   ├── linux/               # Linux 分类文章
 │   ├── k8s/                 # K8s 分类文章
+│   ├── design/              # 设计模式
+│   ├── tools/               # 开发工具
 │   └── README.md
 ├── package.json
 └── node_modules/
@@ -143,11 +153,15 @@ systemctl stop clash
 3. **分类导航**: 一定要在 `config.js` 添加文章链接，否则侧边栏看不到文章
    - 纯文字链接：直接写文件名 `'article-name'`，显示为文件名
    - 自定义中文标题：写成 `{ text: '显示标题', link: 'article-name' }`
-4. **编译缓存问题**: 新增文章如果没生成html，尝试 `rm -rf docs/.vuepress/dist` 清理后重新编译
-5. **broken link 问题**: 不要使用 `{docsify-updated}` 这类docsify特有语法，VuePress不支持会生成死链
-6. **代理使用**: GitHub 拉推送必须启动 clash，完成后关闭
-7. **部署**: 每次编译后都要重新 `cp` 到 nginx 目录
+4. **常见问题：侧边栏配置不生效**
+   - 如果已经在 `config.js` 配置了侧边栏，但页面还是看不到导航，检查**分类首页README.md**
+   - 如果 README.md 开头有 `sidebar: auto`，它会覆盖 `config.js` 的手动配置，删除这行即可
+   - 这是VuePress默认行为，`sidebar: auto` 表示让VuePress自动生成侧边栏
+5. **编译缓存问题**: 新增文章如果没生成html，尝试 `rm -rf docs/.vuepress/dist` 清理后重新编译
+6. **broken link 问题**: 不要使用 `{docsify-updated}` 这类docsify特有语法，VuePress不支持会生成死链
+7. **代理使用**: GitHub 拉推送必须启动 clash，完成后关闭
+8. **部署**: 每次编译后都要重新 `cp` 到 nginx 目录
 
 ---
 
-最后更新：{docsify-updated}
+最后更新：2026-03-24
