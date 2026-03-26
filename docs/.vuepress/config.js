@@ -47,6 +47,7 @@ export default defineUserConfig({
                 'iscsi',
                 'ceph-rbd-iscsi-overview',
                 'ceph18-vs-ceph16-new-features',
+                'deploy-single-node-ceph18',
                 {
                     text: '第1单元-快速入门',
                     collapsible: true,
