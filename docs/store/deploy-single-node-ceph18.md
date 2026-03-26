@@ -425,6 +425,22 @@ osd_pool_default_size: 1
 osd_pool_default_min_size: 1
 ```
 
+### 配置 inventory 主机清单：
+
+```ini
+[mons]
+your-node-name ansible_host=your-node-ip
+
+[osds]
+your-node-name ansible_host=your-node-ip
+
+[grafana-server]
+your-node-name ansible_host=your-node-ip
+
+[all:vars]
+ansible_connection=local
+```
+
 ### 执行部署：
 
 ```bash
@@ -432,6 +448,34 @@ ansible-playbook -i inventory site.yml
 ```
 
 ceph-ansible 会自动化完成所有部署步骤，适合多节点，单节点也可以用。
+
+### 部署完成后添加新的 OSD
+
+如果你部署完成后，新增了一块磁盘需要添加为 OSD：
+
+1. **编辑 `devices` 配置，添加新磁盘：**
+```yaml
+devices:
+  - /dev/sdb
+  - /dev/sdc  # 新增磁盘
+```
+
+2. **只执行 OSD 角色重新部署：**
+```bash
+ansible-playbook -i inventory site.yml --limit osds
+```
+
+或者，如果你只想对特定节点重新部署 OSD：
+```bash
+ansible-playbook -i inventory site.yml --limit your-node-name
+```
+
+3. **验证添加结果：**
+```bash
+ceph osd tree
+```
+
+就能看到新的 OSD 已经加入集群了。
 
 ## 十、三种部署方式对比
 
