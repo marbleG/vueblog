@@ -243,7 +243,205 @@ rbd pool init mypool
 
 如果遇到问题，改用 Docker 运行即可。
 
-## 十、总结
+---
+
+## 方式二：ceph-deploy 非容器化部署
+
+如果你的环境无法使用容器（Podman/Docker），可以使用传统的 `ceph-deploy` 方式部署。
+
+> **注意**：`ceph-deploy` 是比较老的部署工具，Ceph 官方现在已经推荐使用 `cephadm`，但如果你确实无法使用容器，可以用这种方式。
+
+### 环境准备
+
+```bash
+# 1. 设置主机名，ceph-deploy 需要解析主机名
+hostnamectl set-hostname ceph-node1
+
+# 2. 修改 hosts，确保主机名能解析
+echo "127.0.0.1 ceph-node1" >> /etc/hosts
+
+# 3. 关闭防火墙和 selinux（测试环境可以关闭，生产按需配置
+systemctl stop firewalld
+systemctl disable firewalld
+setenforce 0
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+
+# 4. 添加 Ceph 仓库
+curl -o /etc/yum.repos.d/ceph.repo <<EOF
+[ceph]
+name=Ceph packages for \$basearch
+baseurl=https://download.ceph.com/rpm-reef/el9/\$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://download.ceph.com/keys/release.asc
+EOF
+
+# 5. 安装 ceph-deploy
+dnf install -y ceph-deploy python3
+```
+
+### 创建集群目录
+
+```bash
+mkdir -p ~/ceph-cluster
+cd ~/ceph-cluster
+```
+
+### 初始化集群
+
+```bash
+# 创建集群，指定节点名要和主机名一致
+ceph-deploy new ceph-node1
+```
+
+这一步会生成：
+- `ceph.conf` - 集群配置
+- `ceph.bootstrap-mons.keyring` - mon 引导密钥
+- `ceph-deploy-*.log` - 日志
+
+### 修改配置（单节点）：
+
+```bash
+# 在 ceph.conf 末尾添加，告诉 Ceph 单节点配置
+cat >> ceph.conf <<EOF
+osd_crush_chooseleaf_type = 0
+osd_pool_default_size = 1
+osd_pool_default_min_size = 1
+EOF
+```
+
+### 安装 Ceph 软件包
+
+```bash
+ceph-deploy install ceph-node1
+```
+
+这一步会在所有节点（这里只有一个）安装 Ceph 相关软件包。
+
+### 部署 Monitor
+
+```bash
+ceph-deploy mon create-initial
+```
+
+执行完成后会生成各种密钥：
+- `ceph.bootstrap-osd.keyring`
+- `ceph.bootstrap-mds.keyring`
+- `ceph.bootstrap-rgw.keyring`
+- `ceph.client.admin.keyring`
+
+### 复制配置和密钥
+
+```bash
+ceph-deploy admin ceph-node1
+```
+
+这一步会把配置和 admin 密钥拷贝到 `/etc/ceph/`。
+
+### 添加 OSD
+
+首先准备一块空闲磁盘 `/dev/sdb`，然后：
+
+```bash
+# 方式一：使用整个磁盘
+ceph-deploy osd create --data /dev/sdb ceph-node1
+```
+
+完成后 OSD 就会自动加入集群了。
+
+### 验证集群
+
+```bash
+ceph -s
+```
+
+输出应该类似：
+
+```
+  cluster:
+    id:     xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    health: HEALTH_OK
+
+  services:
+    mon: 1 daemons, quorum ceph-node1
+    mgr: ceph-node1(active)
+    osd: 1 osds: 1 up, 1 in
+
+  data:
+    pools:   1 pool, 64 pgs
+    objects: 0 objects, 0 B
+    usage:   1.0 GiB used, 99 GiB / 100 GiB avail
+    pgs:     64 active+clean
+```
+
+### ceph-deploy 方式总结
+
+| 步骤 | 命令 |
+|------|------|
+| 1 | 设置主机名和 hosts | `hostnamectl set-hostname ceph-node1` |
+| 2 | 关闭防火墙 selinux | |
+| 3 | 添加 Ceph Reef 仓库 | |
+| 4 | 安装 ceph-deploy | `dnf install ceph-deploy` |
+| 5 | 创建目录并初始化 | `cd ~/ceph-cluster && ceph-deploy new ceph-node1` |
+| 6 | 修改单节点配置 | 添加 `osd_crush_chooseleaf_type = 0` 等 |
+| 7 | 安装 Ceph | `ceph-deploy install ceph-node1` |
+| 8 | 初始化 mon | `ceph-deploy mon create-initial` |
+| 9 | 推送配置 | `ceph-deploy admin ceph-node1` |
+| 10 | 添加 OSD | `ceph-deploy osd create --data /dev/sdb ceph-node1` |
+
+## 方式三：Ansible (ceph-ansible)
+
+如果你想用自动化方式部署，可以使用官方的 `ceph-ansible`。
+
+### 准备：
+
+```bash
+# 安装 Ansible
+dnf install -y ansible git
+
+# 克隆仓库
+git clone --single-branch --branch reef https://github.com/ceph/ceph-ansible.git
+cd ceph-ansible
+
+# 复制配置
+cp site.yml.sample site.yml
+cp group_vars/all.yml.sample group_vars/all.yml
+cp group_vars/ceph.yml.sample group_vars/ceph.yml
+```
+
+### 修改配置 `group_vars/all.yml` 关键配置：
+
+```yaml
+# 单节点集群设置
+ceph_fsid:
+ceph_mon_mons_run:
+  - your-node-ip
+ceph_osds_run:
+  - your-node-ip
+osd_objectstore: bluestore
+devices:
+  - /dev/sdb  # 你的空闲磁盘
+osd_pool_default_size: 1
+osd_pool_default_min_size: 1
+```
+
+### 执行部署：
+
+```bash
+ansible-playbook -i inventory site.yml
+```
+
+ceph-ansible 会自动化完成所有部署步骤，适合多节点，单节点也可以用。
+
+## 十、三种部署方式对比
+
+| 方式 | 是否需要容器 | 官方推荐 | 使用场景 |
+|------|--------------|----------|----------|
+| cephadm | ✅ 需要 | ✅ 是 | 现代部署，推荐 |
+| ceph-deploy | ❌ 不需要 | ⚠️ 不推荐，已停止维护 | 无法使用容器的环境 |
+| ceph-ansible | 容器化部署 | ✅ 是 | 自动化部署多节点 |
+
+## 十一、总结
 
 使用 `cephadm` 部署单节点 Ceph 18 非常简单，主要步骤：
 
@@ -259,7 +457,9 @@ rbd pool init mypool
 - 小型开发环境
 - 个人存储服务器
 
-## 参考资料
+总结：如果你能使用容器，优先选择 **cephadm**；如果无法使用容器，选择 **ceph-deploy**；如果需要自动化批量部署多节点，选择 **ceph-ansible**。
+
+## 十二、参考资料
 
 - [官方文档 - Using Cephadm to Deploy a New Ceph Cluster](https://docs.ceph.com/en/latest/cephadm/install/)
 - [官方文档 - Single Node Deployment](https://docs.ceph.com/en/latest/cephadm/install/#single-host)
