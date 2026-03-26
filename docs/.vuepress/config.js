@@ -46,6 +46,7 @@ export default defineUserConfig({
                 'ceph',
                 'iscsi',
                 'ceph-rbd-iscsi-overview',
+                'ceph18-vs-ceph16-new-features',
                 {
                     text: '第1单元-快速入门',
                     collapsible: true,
@@ -82,6 +83,7 @@ export default defineUserConfig({
             ],
             '/linux/': [
                 '',
+                'build-rpm-package',
             ],
             '/design/': [
                 '',
