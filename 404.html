@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.26" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <title>Marble's blog</title><meta name="description" content="技术博客">
+    <link rel="preload" href="/assets/style-HUGcCK46.css" as="style"><link rel="stylesheet" href="/assets/style-HUGcCK46.css">
+    <link rel="modulepreload" href="/assets/app-ZssbyP6J.js"><link rel="modulepreload" href="/assets/404.html-Czj5P4LX.js">
+    <link rel="prefetch" href="/assets/index.html-CfxTTfAg.js" as="script"><link rel="prefetch" href="/assets/index.html-D1W-0zqo.js" as="script"><link rel="prefetch" href="/assets/devops.html-CCveelbx.js" as="script"><link rel="prefetch" href="/assets/index.html-BqFfcawp.js" as="script"><link rel="prefetch" href="/assets/aof.html-CofuR0_T.js" as="script"><link rel="prefetch" href="/assets/mariadb-galera-guide.html-C4Gbf7f9.js" as="script"><link rel="prefetch" href="/assets/rdb.html-BBe1A4UD.js" as="script"><link rel="prefetch" href="/assets/index.html-CtpN9XLy.js" as="script"><link rel="prefetch" href="/assets/index.html-CsDfBAfQ.js" as="script"><link rel="prefetch" href="/assets/abstract-factory.html-BWphSgGe.js" as="script"><link rel="prefetch" href="/assets/adapter.html-B5atjk9a.js" as="script"><link rel="prefetch" href="/assets/bridge.html-Dm0_2ClU.js" as="script"><link rel="prefetch" href="/assets/builder.html-uZkhFMop.js" as="script"><link rel="prefetch" href="/assets/chain-of-responsibility.html-CV8RPl_b.js" as="script"><link rel="prefetch" href="/assets/command.html-DfNp9qhG.js" as="script"><link rel="prefetch" href="/assets/composite.html-D1MvZIU-.js" as="script"><link rel="prefetch" href="/assets/decorator.html-Ce-JaN5_.js" as="script"><link rel="prefetch" href="/assets/facade.html-B5SL88xr.js" as="script"><link rel="prefetch" href="/assets/factory-method.html-DjOFlj4-.js" as="script"><link rel="prefetch" href="/assets/flyweight.html-BUxErS-W.js" as="script"><link rel="prefetch" href="/assets/interpreter.html-B0iix15S.js" as="script"><link rel="prefetch" href="/assets/iterator.html-BDxmeJmY.js" as="script"><link rel="prefetch" href="/assets/mediator.html-ZD6-5o0O.js" as="script"><link rel="prefetch" href="/assets/memento.html-LiBV71OH.js" as="script"><link rel="prefetch" href="/assets/observer.html-BN3iwTBj.js" as="script"><link rel="prefetch" href="/assets/prototype.html-DfMbcWZo.js" as="script"><link rel="prefetch" href="/assets/proxy.html-Bkm0mZgZ.js" as="script"><link rel="prefetch" href="/assets/simple-factory.html-DrINRXg4.js" as="script"><link rel="prefetch" href="/assets/singleton.html-C8OvC9j_.js" as="script"><link rel="prefetch" href="/assets/state.html-DsBryiYi.js" as="script"><link rel="prefetch" href="/assets/strategy.html-XSR60d7H.js" as="script"><link rel="prefetch" href="/assets/template-method.html-CHFPve1W.js" as="script"><link rel="prefetch" href="/assets/visitor.html-Cx56iTFA.js" as="script"><link rel="prefetch" href="/assets/index.html-u9ybQKp6.js" as="script"><link rel="prefetch" href="/assets/base.html-BRSHVMHW.js" as="script"><link rel="prefetch" href="/assets/index.html-DicZTxrk.js" as="script"><link rel="prefetch" href="/assets/design.html-CFhDIGbu.js" as="script"><link rel="prefetch" href="/assets/vueblog-maintain.html-B2y23-BS.js" as="script"><link rel="prefetch" href="/assets/index.html-B1GfFd7j.js" as="script"><link rel="prefetch" href="/assets/build-rpm-package.html-fOy_1Ama.js" as="script"><link rel="prefetch" href="/assets/index.html-DH5_LrWO.js" as="script"><link rel="prefetch" href="/assets/ceph-rbd-iscsi-overview.html-DpTP5MzI.js" as="script"><link rel="prefetch" href="/assets/ceph.html-DIF1VJ6N.js" as="script"><link rel="prefetch" href="/assets/ceph18-vs-ceph16-new-features.html-z-JC27RU.js" as="script"><link rel="prefetch" href="/assets/deploy-single-node-ceph18.html-cSCrymLH.js" as="script"><link rel="prefetch" href="/assets/iscsi.html-GyMV6ebl.js" as="script"><link rel="prefetch" href="/assets/mariadb-galera-guide.html-C_QCv1cQ.js" as="script"><link rel="prefetch" href="/assets/index.html-CB2VuPu2.js" as="script"><link rel="prefetch" href="/assets/opencode.html-C2tZtLLz.js" as="script"><link rel="prefetch" href="/assets/vibe-coding-ai-coding.html-m4KBMhVT.js" as="script"><link rel="prefetch" href="/assets/Ceph分布式存储.html-DSKZrB9a.js" as="script"><link rel="prefetch" href="/assets/Ceph分布式存储.html-ChGfIfl2.js" as="script"><link rel="prefetch" href="/assets/Ceph分布式存储.html-B4IyvPeG.js" as="script"><link rel="prefetch" href="/assets/index.html-V7sYlf5k.js" as="script"><link rel="prefetch" href="/assets/atomic.html-BWJ8MTRg.js" as="script"><link rel="prefetch" href="/assets/basics.html-CNjN_nBS.js" as="script"><link rel="prefetch" href="/assets/locks.html-BpzYTt2J.js" as="script"><link rel="prefetch" href="/assets/synchronizers.html-D7ZF5Z2v.js" as="script"><link rel="prefetch" href="/assets/thread-pool.html-BjjQ5YFQ.js" as="script"><link rel="prefetch" href="/assets/list-vs-set.html-Crj9XHoJ.js" as="script"><link rel="prefetch" href="/assets/map-implementations.html-BqwzOdb1.js" as="script"><link rel="prefetch" href="/assets/overview.html-Bsxa8IkV.js" as="script"><link rel="prefetch" href="/assets/java17.html-Rsy-A-vr.js" as="script"><link rel="prefetch" href="/assets/java8.html-BWLrUPsS.js" as="script"><link rel="prefetch" href="/assets/java9-11.html-Cozx7PJV.js" as="script"><link rel="prefetch" href="/assets/class-loading.html-BYlGHGy9.js" as="script"><link rel="prefetch" href="/assets/garbage-collection.html-CyhoWi4Q.js" as="script"><link rel="prefetch" href="/assets/jvm-tuning.html-IsVFtisy.js" as="script"><link rel="prefetch" href="/assets/memory-model.html-BwS-gMyo.js" as="script"><link rel="prefetch" href="/assets/io-bio-nio.html-B8YTt8CY.js" as="script"><link rel="prefetch" href="/assets/netty.html-CP7EMozw.js" as="script"><link rel="prefetch" href="/assets/jdbc.html-BoIhy3QD.js" as="script"><link rel="prefetch" href="/assets/jpa-hibernate.html-Cv_yUDD3.js" as="script"><link rel="prefetch" href="/assets/mybatis.html-CyAAPF-E.js" as="script"><link rel="prefetch" href="/assets/spring-aop.html-BAR3HzOw.js" as="script"><link rel="prefetch" href="/assets/spring-boot.html-BzxrKnSo.js" as="script"><link rel="prefetch" href="/assets/spring-common-annotations.html-BnMvWUgp.js" as="script"><link rel="prefetch" href="/assets/spring-ioc.html-DHmocIxO.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container" vp-container data-v-c828d085><main class="page" data-v-c828d085><div vp-content data-v-c828d085><h1 data-v-c828d085>404</h1><blockquote data-v-c828d085>There&#39;s nothing here.</blockquote><a class="route-link" href="/" data-v-c828d085>Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-ZssbyP6J.js" defer></script>
+  </body>
+</html>
