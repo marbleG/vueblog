@@ -19,7 +19,7 @@ export default defineUserConfig({
         navbar: [
             { text: 'Home', link: '/' },
             { text: 'java', link: '/zh/java/' },
-            { text: 'redis', link: '/redis/' },
+            { text: '数据库', link: '/database/' },
             { text: 'CI/CD', link: '/cicd/' },
             { text: '网络', link: '/network/' },
             { text: '存储', link: '/store/' },
@@ -36,10 +36,12 @@ export default defineUserConfig({
                 '',
                 'devops',
             ],
-            '/redis/': [
+            '/database/': [
                 '',
+                { text: 'Redis', link: 'README' },
                 'aof',
-                'rdb'
+                'rdb',
+                'mariadb-galera-guide',
             ],
             '/store/': [
                 '',
