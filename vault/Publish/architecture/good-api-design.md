@@ -1,12 +1,12 @@
 ---
-title: "API 设计最佳实践"
+title: API 设计最佳实践
 date: 2026-07-04
 publish: true
-source: "https://www.seangoedecke.com/good-api-design/"
+source: https://www.seangoedecke.com/good-api-design/
 tags:
-  - "api"
-  - "架构"
-  - "最佳实践"
+  - api
+  - 架构
+  - 最佳实践
 ---
 
 # API 设计最佳实践
