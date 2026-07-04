@@ -133,3 +133,16 @@ dist
 .idea
 # Worktrees
 .worktrees/
+# Obsidian vault metadata (not notes)
+vault/.obsidian/workspace.json
+vault/.obsidian/workspace-mobile.json
+vault/.obsidian/plugins/*/data.json
+vault/.obsidian/cache
+vault/.obsidian/graph.json
+
+# Draw.io / Excalidraw local backups
+*.svg.bak
+*.png.bak
+
+# Project docs local scratch
+*.local.md
