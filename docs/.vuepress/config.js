@@ -19,6 +19,7 @@ export default defineUserConfig({
         navbar: [
             { text: 'Home', link: '/' },
             { text: 'java', link: '/zh/java/' },
+            { text: '架构', link: '/architecture/' },
             { text: '数据库', link: '/database/' },
             { text: 'CI/CD', link: '/cicd/' },
             { text: '网络', link: '/network/' },
@@ -32,6 +33,10 @@ export default defineUserConfig({
             { text: 'google', link: 'https://www.google.com' },
         ],
         sidebar: {
+            '/architecture/': [
+                '',
+                'good-api-design',
+            ],
             '/cicd/': [
                 '',
                 'devops',
