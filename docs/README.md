@@ -4,7 +4,7 @@ heroImage: /logo.png
 heroText: Marble's blog
 tagline: 博客
 actionText: 起飞 →
-actionLink: /zh/guide/
+actionLink: /zh/java/
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。

@@ -31,15 +31,23 @@ This is a VuePress v2 static blog site (Marble's blog) for technical documentati
 ```
 vueblog/
 ├── .github/workflows/          # CI/CD
-├── docs/                       # All content
+├── docs/                       # VuePress 源目录（公开内容）
 │   ├── .vuepress/
 │   │   ├── config.js           # VuePress site config (ONLY edit this)
 │   │   ├── public/             # Static assets (logo, favicon)
 │   │   └── dist/               # Build output (auto-generated)
-│   ├── cicd/, design/, k8s/, linux/, network/, redis/, store/, tools/
+│   ├── cicd/, database/, design/, k8s/, linux/, network/, store/, tools/
 │   ├── standard/
-│   ├── zh/                     # Chinese content (guide/, java/)
+│   ├── zh/java/
 │   └── README.md               # Home page
+├── vault/                      # Obsidian knowledge base (private)
+│   ├── .obsidian/              # Obsidian config
+│   ├── Publish/                # Articles to publish
+│   ├── Notes/                  # Personal notes
+│   ├── Inbox/                  # Temporary / draft notes
+│   └── Clippings/              # Web clippings
+├── doc/                        # Engineering documentation
+├── scripts/                    # Automation scripts
 ├── package.json
 └── deploy.sh
 ```
@@ -70,10 +78,10 @@ export default defineUserConfig({
     theme: defaultTheme({
         navbar: [
             { text: 'Home', link: '/' },
-            { text: 'redis', link: '/redis/' },
+            { text: 'database', link: '/database/' },
         ],
         sidebar: {
-            '/redis/': ['', 'aof', 'rdb'],
+            '/database/': ['', 'mariadb-galera-guide'],
             // Sidebar keys MUST end with '/' for directories
         }
     })
@@ -81,7 +89,7 @@ export default defineUserConfig({
 ```
 
 **Sidebar Configuration Rules**:
-1. **Keys must match URL prefixes exactly** (e.g., `'/redis/'` maps to `docs/redis/`)
+1. **Keys must match URL prefixes exactly** (e.g., `'/database/'` maps to `docs/database/`)
 2. **Keys must end with `/`** for directories
 3. **Values are arrays** of file paths (without extension) relative to `docs/`
 4. **Support nested structures** with `collapsible: true`
