@@ -160,7 +160,38 @@ export default defineUserConfig({
 
 ---
 
-## 5. Dependencies
+## 5. Obsidian Vault 与内容发布
+
+### 仓库结构补充
+
+- `vault/`：Obsidian Vault，只打开此目录作为 Vault。
+- `vault/Publish/<category>/`：要发布到博客的文章源文件。
+- `docs/<category>/`：由 `yarn sync` 生成的公开文章，**不要直接编辑**。
+
+### 发布文章流程
+
+1. 在 `vault/Publish/<category>/` 下新建 Markdown 文件。
+2. 添加 frontmatter：
+   ```yaml
+   ---
+   title: 标题
+   date: 2026-07-04
+   publish: true
+   ---
+   ```
+3. 运行 `yarn sync` 同步到 `docs/`。
+4. 运行 `yarn docs:build` 验证构建通过。
+5. 提交并 push。
+
+### 新增分类
+
+1. 在 `vault/Publish/` 下新建分类目录。
+2. 在 `docs/.vuepress/config.js` 的 `navbar` 和 `sidebar` 中添加对应配置。
+3. 运行 `yarn sync` 和 `yarn docs:build` 验证。
+
+---
+
+## 6. Dependencies
 
 - **Only add dependencies if necessary** (e.g., new VuePress plugins)
 - **Verify build passes** after adding dependencies
@@ -168,7 +199,7 @@ export default defineUserConfig({
 
 ---
 
-## 6. Key Things to Avoid
+## 7. Key Things to Avoid
 
 1. **Do not modify** files inside `docs/.vuepress/dist/` (auto-generated)
 2. **Do not hardcode** absolute URLs for internal links
@@ -179,4 +210,4 @@ export default defineUserConfig({
 
 ---
 
-*Last updated: 2026-03-21*
+*Last updated: 2026-07-04*

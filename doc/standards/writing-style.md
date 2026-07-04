@@ -10,6 +10,8 @@ publish: true
 ---
 ```
 
+`publish: true` 是同步脚本识别的开关，只有设置该字段的文章才会被复制到 `docs/`。
+
 ## 图片
 
 - 使用相对路径，如 `./image/diagram.png`。

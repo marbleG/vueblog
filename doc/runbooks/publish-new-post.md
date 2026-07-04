@@ -18,4 +18,4 @@
 
 ## 分类选择
 
-分类对应 `docs/.vuepress/config.js` 中 `sidebar` 和 `navbar` 的 key，如 `database`、`java`、`linux`。
+分类对应 `vault/Publish/` 下的子目录，并在 `docs/.vuepress/config.js` 中配置 `sidebar` 和 `navbar`，如 `database`、`java`、`linux`。
