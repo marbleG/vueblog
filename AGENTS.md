@@ -38,7 +38,7 @@ vueblog/
 │   │   └── dist/               # Build output (auto-generated)
 │   ├── cicd/, database/, design/, k8s/, linux/, network/, store/, tools/
 │   ├── standard/
-│   ├── zh/java/
+│   ├── zh/java/                # Chinese Java content
 │   └── README.md               # Home page
 ├── vault/                      # Obsidian knowledge base (private)
 │   ├── .obsidian/              # Obsidian config
