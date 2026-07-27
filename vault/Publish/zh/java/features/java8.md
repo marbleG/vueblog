@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [java, java特性, 已发布]
 
+---
 # Java 8 重要特性
 
 Java 8 是 Java 历史上最重要的版本更新之一，引入了函数式编程、Stream、新的日期时间 API 等重大改进。

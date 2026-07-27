@@ -4,13 +4,8 @@ title: MariaDB Galera Cluster 深入指南
 date: 2026-03-29
 categories:
   - 数据库
-tags:
-  - MariaDB
-  - Galera
-  - 集群
-  - 高可用
+tags: [Galera, MariaDB, 已发布, 数据库, 集群, 高可用]
 ---
-
 ## 目录
 
 1. 核心概念

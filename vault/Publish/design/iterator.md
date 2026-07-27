@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [已发布, 设计模式]
 
+---
 # 迭代器模式（Iterator）
 
 ## 模式定义

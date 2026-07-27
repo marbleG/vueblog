@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [linux, 已发布]
 
+---
 # linux学习
 
 ## 磁盘管理

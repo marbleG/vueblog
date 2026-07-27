@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [java, 已发布, 并发]
 
+---
 # Java 锁机制
 
 ## synchronized 关键字

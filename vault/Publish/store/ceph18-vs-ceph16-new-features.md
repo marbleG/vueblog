@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [ceph, 存储, 已发布]
 
+---
 # Ceph 18 (Reef) 对比 Ceph 16 (Pacific) 新增功能详解
 
 Ceph 是一款开源的分布式存储系统，提供对象、块和文件存储功能。本文将详细介绍 Ceph 18 (Reef) 相比 Ceph 16 (Pacific) 版本新增和改进的主要功能。

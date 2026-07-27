@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [k8s, 已发布]
 
+---
 # k8s 
 ### 1. 安装
 1. 使用minikube 安装

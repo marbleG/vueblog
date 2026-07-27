@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [java, java特性, 已发布]
 
+---
 # Java 9 - Java 11 重要变化
 
 ## Java 9 核心特性

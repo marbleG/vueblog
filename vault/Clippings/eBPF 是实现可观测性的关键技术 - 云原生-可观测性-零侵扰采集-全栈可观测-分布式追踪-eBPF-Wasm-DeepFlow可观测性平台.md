@@ -6,8 +6,7 @@ author:
 published: 2023-09-09
 created: 2026-07-23
 description: "APM Agent 由于其侵扰性，难以在金融、电信、电力等行业的核心业务系统中落地，难以在云原生基础设施中插桩。eBPF 的零侵扰优势很好的解决了这些痛点，是云原生时代实现可观测性的关键技术。DeepFlow 基于 eBPF 的全景图、分布式追踪、持续性能剖析能力已服务于各行各业，帮助金融行业的分布式核心交易系统、电信行业的 5G 核心网、能源行业的分布式电力交易系统、智能网联汽车、云原生游戏服务"
-tags:
-  - "clippings"
+tags: [剪藏]
 ---
 ![eBPF 是实现可观测性的关键技术](https://yunshan-guangzhou.oss-cn-beijing.aliyuncs.com/pub/pic/20231117655709f402cf1.png "eBPF 是实现可观测性的关键技术") eBPF 是实现可观测性的关键技术
 

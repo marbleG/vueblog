@@ -2,10 +2,9 @@
 publish: true
 title: vueblog 项目维护流程
 date: 2026-03-20
-tags: [vueblog, 维护流程, 规范]
+tags: [vueblog, 已发布, 维护流程, 规范]
 categories: 规范
 ---
-
 # vueblog 项目维护流程
 
 本文记录个人博客项目 vueblog 的日常维护流程，方便协同维护。

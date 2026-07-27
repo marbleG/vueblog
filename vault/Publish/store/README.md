@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [ceph, 存储, 已发布]
 
+---
 # 存储
 ### 1. 集中式存储
 1. DAS

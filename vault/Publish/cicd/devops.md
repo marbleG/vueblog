@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [cicd, 已发布]
 
+---
 # CI/CD
 
 ### sonar 

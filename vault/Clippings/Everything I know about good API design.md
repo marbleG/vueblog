@@ -5,8 +5,7 @@ author:
 published:
 created: 2026-07-04
 description:
-tags:
-  - "clippings"
+tags: [剪藏]
 ---
 Most of what modern software engineers do [^1] involves APIs: public interfaces for communicating with a program, like [this one](https://www.twilio.com/docs/iam/api/account#fetch-an-account-resource) from Twilio. I’ve spent a *lot* of time working with APIs, both building and using them. I’ve written public APIs for third-party developers, private APIs for internal use (or consumption by a single frontend page), REST and GraphQL APIs, and even non-network interfaces like the ones for command-line tools.
 

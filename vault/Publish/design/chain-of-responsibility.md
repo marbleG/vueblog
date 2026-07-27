@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [已发布, 设计模式]
 
+---
 # 责任链模式（Chain of Responsibility）
 
 ## 模式定义

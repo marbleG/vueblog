@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [java, orm, 已发布]
 
+---
 # MyBatis
 
 ## MyBatis 简介

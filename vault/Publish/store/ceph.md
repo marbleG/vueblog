@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [ceph, 存储, 已发布]
 
+---
 # ceph分布式文件系统
 
 ## 1.快速入门

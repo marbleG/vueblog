@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [已发布, 设计模式]
 
+---
 # 抽象工厂模式（Abstract Factory）
 
 ## 模式定义

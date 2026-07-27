@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [java, jvm, 已发布]
 
+---
 # JVM 垃圾回收
 
 ## 垃圾回收基本概念

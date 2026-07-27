@@ -6,8 +6,7 @@ author:
 published: 2026-06-08
 created: 2026-07-04
 description: "Unlock the truth about design patterns in software engineering! Discover why design patterns may not be as beneficial as they seem and how language limitations lead to their overuse. Explore the flaws in popular patterns and the importance of understanding core programming concepts."
-tags:
-  - "clippings"
+tags: [剪藏]
 ---
 In software engineering, the term "design pattern" (which, honestly, is kind of redundant — aren't *all* patterns designs?) gets thrown around a lot. It originally came from architecture — *actual* architecture, with buildings and floorplans — not software.
 

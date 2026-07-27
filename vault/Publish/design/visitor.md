@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [已发布, 设计模式]
 
+---
 # 访问者模式（Visitor）
 
 ## 模式定义
