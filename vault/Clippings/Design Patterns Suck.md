@@ -115,3 +115,6 @@ Guido van Rossum went the opposite direction with Python. His premise: code is r
 Design patterns are a Gosling-world solution. They exist because the language doesn't trust you to solve the problem directly. In a Guido-world language, you just... solve it.
 
 Design patterns are relics of a time when languages weren't expressive enough. The fact that half of the GoF patterns disappear in Python, Ruby, or Scala tells you everything — they were never about design. They were about the language getting out of your way.
+## 相关笔记
+
+- [[Publish/design/README|设计模式]]

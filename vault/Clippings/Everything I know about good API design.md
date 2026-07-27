@@ -183,3 +183,7 @@ Here's a preview of a related post that shares tags with this one.
 [^5]: He was later hired to the Apps team, where I worked with him for several years.
 
 [^6]: The other part of the GraphQL idea is to let different backend services serve different parts of a single API, in a way that’s opaque to the API consumer.
+## 相关笔记
+
+- [[Publish/architecture/README|架构]]
+- [[Publish/standard/design|API 设计规范]]
