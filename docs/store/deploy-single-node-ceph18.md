@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [ceph, 存储, 已发布]
 
+---
 # 单节点部署 Ceph 18 (Reef) 集群完整指南
 
 Ceph 18（代号 Reef）是 Ceph 目前的稳定版本，本文介绍使用官方推荐的 `cephadm` 工具在单节点上部署 Ceph 集群。

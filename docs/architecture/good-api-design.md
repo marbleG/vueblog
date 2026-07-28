@@ -1,14 +1,10 @@
 ---
-title: "API 设计最佳实践"
+title: API 设计最佳实践
 date: 2026-07-04
 publish: true
-source: "https://www.seangoedecke.com/good-api-design/"
-tags:
-  - "api"
-  - "架构"
-  - "最佳实践"
+source: https://www.seangoedecke.com/good-api-design/
+tags: [api, 已发布, 最佳实践, 架构]
 ---
-
 # API 设计最佳实践
 
 本文整理自 [Everything I know about good API design](https://www.seangoedecke.com/good-api-design/)，总结了设计高质量 API 的核心原则与实践经验。

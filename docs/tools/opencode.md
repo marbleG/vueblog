@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [工具, 已发布]
 
+---
 # OpenCode - AI 编程代理使用指南与最佳实践
 
 ## 什么是 OpenCode

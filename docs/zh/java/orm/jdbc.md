@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [java, orm, 已发布]
 
+---
 # JDBC 基础
 
 ## JDBC 概念

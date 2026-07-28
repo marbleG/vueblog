@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [已发布, 设计模式]
 
+---
 # 解释器模式（Interpreter）
 
 ## 模式定义

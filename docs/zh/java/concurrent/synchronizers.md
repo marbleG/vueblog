@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [java, 已发布, 并发]
 
+---
 # 同步工具类
 
 Java `java.util.concurrent` 包提供了几种实用的并发同步工具类。

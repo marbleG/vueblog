@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [java, spring, 已发布]
 
+---
 # Spring 常用注解总结
 
 ## 组件扫描注解

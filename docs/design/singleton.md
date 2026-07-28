@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [已发布, 设计模式]
 
+---
 # 单例模式（Singleton）
 
 ## 模式定义

@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [已发布, 设计模式]
 
+---
 # 工厂方法模式（Factory Method）
 
 ## 模式定义

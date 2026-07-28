@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [已发布, 设计模式]
 
+---
 # 装饰器模式（Decorator）
 
 ## 模式定义

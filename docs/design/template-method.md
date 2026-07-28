@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [已发布, 设计模式]
 
+---
 # 模板方法模式（Template Method）
 
 ## 模式定义

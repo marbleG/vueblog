@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [linux, 已发布]
 
+---
 # 构建 RPM 包完整指南
 
 RPM（Red Hat Package Manager）是基于 Red Hat 的发行版（如 RHEL、CentOS、Fedora、openEuler 等）使用的软件包管理格式。本文将详细介绍如何从零开始构建自己的 RPM 包。

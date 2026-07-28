@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [java, 已发布]
 
+---
 # Java
 
 这里是我的 Java 学习笔记，整理了 Java 核心知识点、JVM、并发编程、Spring 生态等内容，适合后端开发复习查阅。

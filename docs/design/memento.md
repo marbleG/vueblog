@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [已发布, 设计模式]
 
+---
 # 备忘录模式（Memento）
 
 ## 模式定义

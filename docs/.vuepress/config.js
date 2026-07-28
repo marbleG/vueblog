@@ -29,6 +29,7 @@ export default defineUserConfig({
             { text: '设计模式', link: '/design/' },
             { text: '开发工具', link: '/tools/' },
             { text: '规范', link: '/standard/' },
+            { text: 'AI', link: '/ai/' },
             { text: '百度一下', link: 'https://www.baidu.com' },
             { text: 'google', link: 'https://www.google.com' },
         ],
@@ -127,6 +128,10 @@ export default defineUserConfig({
                 '',
                 'opencode',
                 'vibe-coding-ai-coding',
+            ],
+            '/ai/': [
+                '',
+                'the-harness-is-all-you-need',
             ],
             '/zh/java/': [
                 {

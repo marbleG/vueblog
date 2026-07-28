@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [java, jvm, 已发布]
 
+---
 # JVM 类加载机制
 
 ## 类加载生命周期

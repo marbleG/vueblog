@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [工具, 已发布]
 
+---
 # AI 时代的编码新范式：Vibe Coding 完全指南
 
 ## 什么是 Vibe Coding

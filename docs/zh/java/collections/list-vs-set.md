@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [java, 已发布, 集合]
 
+---
 # List 实现对比：ArrayList vs LinkedList
 
 ## ArrayList

@@ -2,10 +2,9 @@
 publish: true
 title: Ceph RBD iSCSI Gateway 总结
 date: 2026-03-19
-tags: [Ceph, 存储, iSCSI, RBD]
+tags: [Ceph, RBD, ceph, iSCSI, 存储, 已发布]
 categories: 技术
 ---
-
 # Ceph RBD iSCSI Gateway 总结
 
 ## 概述

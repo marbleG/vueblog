@@ -2,10 +2,9 @@
 publish: true
 title: iSCSI 协议基础介绍
 date: 2026-03-20
-tags: [存储, iSCSI, 网络存储]
+tags: [ceph, iSCSI, 存储, 已发布, 网络存储]
 categories: 技术
 ---
-
 # iSCSI 协议基础介绍
 
 ## 什么是 iSCSI

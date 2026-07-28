@@ -20,6 +20,8 @@ tags: [ai, index]
 - `AI/使用/` — 工具实操、工作流、提示词模板
 - `AI/学习/` — 原理、模型、论文与系统学习笔记
 
-当前内容：
+已发布至博客（同属 AI 分类）：
 
-- [[AI/The harness is all you need (mostly)|The harness is all you need (mostly)]] — GitHub Copilot 实用工作流（原型→规划→实现→审查），少即是多
+- [[Publish/ai/the-harness-is-all-you-need|The harness is all you need (mostly)]] — GitHub Copilot 实用工作流（原型→规划→实现→审查），少即是多
+
+个人学习层可继续在此补充未发布的 AI 笔记（按 `使用/` `学习/` 子目录归档）。

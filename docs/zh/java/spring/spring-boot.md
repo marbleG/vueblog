@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [java, spring, 已发布]
 
+---
 # Spring Boot
 
 ## 核心特点

@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [java, 已发布, 并发]
 
+---
 # 原子类
 
 Java `java.util.concurrent.atomic` 包提供了一系列原子操作类，基于 CAS 实现，无锁并发，性能更好。

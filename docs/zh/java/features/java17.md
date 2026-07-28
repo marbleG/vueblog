@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [java, java特性, 已发布]
 
+---
 # Java 17 重要特性
 
 Java 17 是一个 LTS（长期支持）版本，带来了许多成熟的预览特性转正。

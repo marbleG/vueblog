@@ -1,7 +1,8 @@
 ---
 publish: true
----
+tags: [cicd, 已发布]
 
+---
 # 测试
 #### 开发本地启动
 1. 将 VuePress 安装为本地依赖 `yarn add -D vuepress#npm install -D vuepress`
