@@ -1,0 +1,2 @@
+### 零插入适用性
+DeepFlow 将 eBPF Event、BPF Packet、Thread ID、Coroutine ID、Request 到达时序、TCP 发送时序进行关联，实现了高度自动化的分布式追踪（**AutoTracing**）。目前 AutoTracing 支持**所有同线程调用**场景和**部分跨线程调用**（通过解析协议头和 MySQL Comment 中的 X-Request-ID、TraceID/SpanID）场景，支持**所有内核线程调度**（[Kernel Threads (opens new window)](https://en.wikipedia.org/wiki/Thread_\(computing\))）场景和**部分用户态线程调度**（User Threads，例如 Golang Goroutine）场景，在这些场景下支持对任意服务的分布式调用链进行零侵扰追踪。
