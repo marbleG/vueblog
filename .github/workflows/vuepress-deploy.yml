@@ -18,10 +18,11 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18'
+        corepack: true
 
     - name: Install and build docs
       run: |
-        yarn install --frozen-lockfile
+        yarn install
         yarn docs:build
 
     - name: Deploy to gh_pages

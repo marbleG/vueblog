@@ -146,3 +146,10 @@ vault/.obsidian/graph.json
 
 # Project docs local scratch
 *.local.md
+
+# Local verification temp (yarn cache dir used during CI dry-run) & lockfiles
+# not used by the yarn-based deploy workflow
+.yarncache/
+.yarn_install.log
+package-lock.json
+pnpm-lock.yaml
