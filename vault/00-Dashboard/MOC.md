@@ -18,7 +18,7 @@ tags: [dashboard, moc]
 
 | 主题 | 入口 |
 |------|------|
-| 架构 | [[Publish/architecture/README\|architecture]] |
+| 架构→软件工程 | [[Publish/software-engineering/README\|software-engineering]] |
 | CI/CD | [[Publish/cicd/README\|cicd]] |
 | 数据库 | [[Publish/database/README\|database]] |
 | 设计模式 | [[Publish/design/README\|design]] · [[Study/设计模式/练习\|练习]] |

@@ -19,7 +19,7 @@ export default defineUserConfig({
         navbar: [
             { text: 'Home', link: '/' },
             { text: 'java', link: '/zh/java/' },
-            { text: '架构', link: '/architecture/' },
+            { text: '软件工程', link: '/software-engineering/' },
             { text: '数据库', link: '/database/' },
             { text: 'CI/CD', link: '/cicd/' },
             { text: '网络', link: '/network/' },
@@ -34,9 +34,19 @@ export default defineUserConfig({
             { text: 'google', link: 'https://www.google.com' },
         ],
         sidebar: {
-            '/architecture/': [
+            '/software-engineering/': [
                 '',
-                'good-api-design',
+                '编程与语言功底',
+                '数据结构与算法',
+                '代码质量与重构',
+                '设计模式与 SOLID',
+                '系统设计',
+                '测试与质量保障',
+                '调试与问题定位',
+                '工程化',
+                '需求与产品思维',
+                '协作与沟通',
+                '技术影响力与领导力',
             ],
             '/cicd/': [
                 '',

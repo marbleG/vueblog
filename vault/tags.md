@@ -24,7 +24,7 @@ tags: [dashboard, meta]
 | `k8s` | Kubernetes | `Publish/k8s/` |
 | `linux` | Linux | `Publish/linux/` |
 | `网络` | 网络 | `Publish/network/` |
-| `架构` | 架构 | `Publish/architecture/` |
+| `架构` | （已更名）软件工程 | `Publish/software-engineering/` |
 | `cicd` | CI/CD | `Publish/cicd/` |
 | `规范` | 规范 / 标准 | `Publish/standard/` |
 | `工具` | 工具 | `Publish/tools/` |
@@ -32,7 +32,18 @@ tags: [dashboard, meta]
 | `dashboard` | 学习层主控页 | `00-Dashboard/` |
 | `练习` | 学习层练习 | `Study/` |
 | `培训` | 培训材料 | `培训/` |
-| `软件工程` | 软件工程能力提升模块（能力地图/学习笔记/刻意练习/复盘） | `软件工程/` |
+| `软件工程` | 软件工程能力提升（已发布分类，默认分享） | `Publish/software-engineering/` |
+| `软件工程能力` | 软件工程私人成长模块（能力地图/学习笔记/刻意练习/复盘） | `软件工程/` |
+| `编程` | 编程与语言功底 | `Publish/software-engineering/编程与语言功底/` |
+| `算法` | 数据结构与算法 | `Publish/software-engineering/数据结构与算法/` |
+| `代码质量` | 代码质量与重构 | `Publish/software-engineering/代码质量与重构/` |
+| `系统设计` | 系统设计 / 架构（含概要设计） | `Publish/software-engineering/系统设计/` |
+| `测试` | 测试与质量保障 | `Publish/software-engineering/测试与质量保障/` |
+| `调试` | 调试与问题定位 | `Publish/software-engineering/调试与问题定位/` |
+| `工程化` | 工程化 / CI-CD / DevOps | `Publish/software-engineering/工程化/` |
+| `需求` | 需求与产品思维 | `Publish/software-engineering/需求与产品思维/` |
+| `协作` | 协作与沟通 | `Publish/software-engineering/协作与沟通/` |
+| `技术领导力` | 技术影响力 / 领导力 | `Publish/software-engineering/技术影响力与领导力/` |
 | `笔记` | 个人笔记 | `Notes/` |
 | `收集` | Inbox 待整理 | `Inbox/` |
 
