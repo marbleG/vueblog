@@ -1,4 +1,5 @@
 ---
+title: "设计模式与 SOLID"
 publish: true
 tags: [已发布, 软件工程, 设计模式]
 
