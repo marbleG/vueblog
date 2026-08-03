@@ -18,7 +18,8 @@ tags: [dashboard, meta]
 | `jvm` / `并发` / `spring` / `orm` / `网络` / `java特性` / `集合` | Java 子主题 | `Publish/zh/java/*/` |
 | `ceph` / `存储` | Ceph 分布式存储 | `Publish/store/` |
 | `数据库` | 数据库 | `Publish/database/` |
-| `clickhouse` | ClickHouse 列式分析库 | `Notes/ClickHouse.md`（个人笔记，可提至 `Publish/database/`） |
+| `中间件` | 数据库/消息等中间件组件 | `Publish/middleware/` |
+| `clickhouse` | ClickHouse 列式分析库 | `Publish/middleware/clickhouse.md` |
 | `sql` | SQL 速查 / 片段 | 各数据库笔记的速查章节 |
 | `k8s` | Kubernetes | `Publish/k8s/` |
 | `linux` | Linux | `Publish/linux/` |

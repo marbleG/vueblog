@@ -1,12 +1,13 @@
 ---
 title: "ClickHouse 笔记（含 SQL 速查）"
+publish: true
 created: 2026-08-03
-tags: [笔记, clickhouse, 数据库, sql]
+tags: [已发布, 中间件, clickhouse, 数据库, sql]
 ---
 
 # ClickHouse 笔记
 
-> 列式分析型数据库（OLAP），适合海量数据的实时聚合查询。本文是个人速查笔记，含 [[#SQL 速查]] 章节，可直接复制使用。
+> 列式分析型数据库（OLAP），适合海量数据的实时聚合查询。本文含 SQL 速查章节，可直接复制使用。
 
 ## 定位与适用场景
 
